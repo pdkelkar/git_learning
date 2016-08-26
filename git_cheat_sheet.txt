@@ -1,0 +1,56 @@
+git init = attach git functionality to project (create .git folder to indicate its git code)
+git remote add origin <remote (e.g github/bitbucket) ssh url ending in .git> = add local code files to remote repo
+git remote -v = verify if remote repo added correctly
+
+git clone <remote ssh url ending in .git> = clone remote repository
+git status = get status of git changes
+git add -A = stage changes for commit
+git commit -m "<commit changes comments>" = commit changes
+git push = push commited changes from local to remote repo
+git pull = pull latest changes from remote repo to local
+
+git pull = git fetch && git merge
+git fetch = get latest changes from remote repo but do not include them in the code yet
+git merge = after getting latest changes from above step, inlcude them in the code
+
+git branch <feature branch name> = create a new branch
+git branch = show all branches (similar to git status)
+git checkout <feature branch name> = switch to the branch to work on
+git checkout -b <feature branch name> = create a new branch with name <feature branch name> and also switch to this new branch
+git checkout - = toggle between previously checked out branch and current branch e.g new branch and master
+git branch -d <feature branch name> = delete the feature branch
+
+git diff --stat = view changes in files
+git diff HEAD
+git diff --cached
+git diff origin/master
+
+git blame <filename> = last 5 commits with author names and code changes
+
+git tag <tag name e.g v1.0.0> = tag the git
+
+git bisect start = check which commit broke something
+git bisect reset = resume to normal state
+
+For merging feature branch to master
+***********************************
+git checkout master = so that git will point to master branch
+git merge <feature branch name> = merge changes from feature branch to master
+git push = push master changes to remote repo
+
+For Stashing
+************
+git add -A = stage all code changes locally
+git stash = save all code changes locally
+git stash apply = apply all locally saved changes back in the code
+
+For commit history
+******************
+
+git log = output commit history
+git log {arguments} = format git history output
+
+
+
+
+
